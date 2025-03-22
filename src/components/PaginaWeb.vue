@@ -16,6 +16,7 @@
             </ul>
         </nav>
     </header>
+<!---Barra de inicio---->
     <section class="hero">
         <h1>Bienvenido a Hotel las Mil Noches</h1>
         <p>Un refugio de lujo y confort</p>
@@ -181,7 +182,7 @@
             </a>
         </div>
     </section>
-
+<!--Fin de pagina-->
     <footer>
         <p>&copy; 2025 Hotel las Mil Noches Todos los derechos reservados.</p>
     </footer>
