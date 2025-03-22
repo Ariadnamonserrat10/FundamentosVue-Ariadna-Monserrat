@@ -1,13 +1,5 @@
 <script>
-import miImagen from "../assets/ubicacion.gif"; 
 
-export default {
-  data() {
-    return {
-      imageUrl: miImagen
-    };
-  }
-};
 </script>
 
 <template>
@@ -16,15 +8,14 @@ export default {
         <div class="logo">Hotel</div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#about">NOSOTROS</a></li>
-                <li><a href="#rooms">HABITACIONES</a></li>
-                <li><a href="#services">SERVICIOS</a></li>
-                <li><a href="#gallery">GALERÍA</a></li>
-                <li><a href="#contact">CONTACTO</a></li>
+                <li class="titulos"><a href="#about">NOSOTROS</a></li>
+                <li class="titulos"><a href="#rooms">HABITACIONES</a></li>
+                <li class="titulos"><a href="#services">SERVICIOS</a></li>
+                <li class="titulos"><a href="#gallery">OPINIONES</a></li>
+                <li class="titulos"><a href="#contact">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
-
     <section class="hero">
         <h1>Bienvenido a Hotel las Mil Noches</h1>
         <p>Un refugio de lujo y confort</p>
@@ -38,7 +29,7 @@ export default {
             <p>RESERVA</p>
         </a>
     </section>
-
+<!---Sobre nosotros-->
     <section id="about" class="content">
         <h2 class="sobreN">SOBRE NOSOTROS</h2>
         <p class="informacion">
@@ -53,7 +44,7 @@ export default {
         </p>
         <div class="Cons">
             <a href="https://www.google.com/maps?q=Heroica+Ciudad+de+Tlaxiaco" target="_blank">
-    <img :src="Ubicacion" alt="Ubicación">
+    <img class="ubicacion" src="../assets/ubicacion.gif" alt="">
     <span class="pan">Ubicación</span>
 </a>
            
@@ -63,20 +54,18 @@ export default {
         </p>
     </section>
 
-
+<!--Habitaciones-->
     <section id="rooms" class="content">
-        <h2 class="sobreN">HABITACIONES</h2>
-        <p>
-            Explora nuestras habitaciones diseñadas para tu comodidad.
-        </p>
+        <h2 class="sobreN">HABITACIONES</h2><br>
+        <p class="texto-p">Explora nuestras habitaciones diseñadas para tu comodidad.</p>
 
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="">
-                    <div>
-                        <h2>Habitación Estándar</h2>
-                        <p>
+                    <img class="ruleta" src="../assets/Individual.jpg">
+                    <div  class="cuadro">
+                        <h2 class="sobreN">Habitación Estándar</h2>
+                        <p class="habitaciones">
                             Cómoda habitación con cama matrimonial o dos camas individuales, baño privado, aire
                             acondicionado, televisión por cable y wifi gratuito. Ideal para estancias cortas.
                         </p>
@@ -85,10 +74,10 @@ export default {
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="">
-                    <div>
-                        <h2>Habitación Doble</h2>
-                        <p>
+                    <img class="ruleta" src="../assets/persona2.jpg">
+                    <div class="cuadro">
+                        <h2 class="sobreN">Habitación Doble</h2>
+                        <p class="habitaciones">
                             Espaciosa habitación con dos camas matrimoniales, baño privado, aire acondicionado,
                             televisión por cable y wifi gratuito. Perfecta para familias o amigos.
                         </p>
@@ -96,10 +85,10 @@ export default {
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="">
-                    <div>
-                        <h2>Habitación VIP</h2>
-                        <p>
+                    <img class="ruleta" src="../assets/vip.jpg">
+                    <div class="cuadro">
+                        <h2 class="sobreN">Habitación VIP</h2>
+                        <p class="habitaciones">
                             Lujosa suite con cama king-size, jacuzzi, minibar, aire acondicionado, televisión por cable
                             y wifi gratuito. Experiencia premium para una estancia inolvidable.
                         </p>
@@ -118,33 +107,33 @@ export default {
         </div><br>
 
     </section>
-
+<!---Servicios-->
 
     <section id="services" class="content">
         <h2 class="section-title">Servicios</h2>
-        <p class="section-description">Disfruta de nuestras instalaciones y servicios de primer nivel.</p>
+        <p class="texto-p">Disfruta de nuestras instalaciones y servicios de primer nivel.</p>
 
         <div class="services-container">
             <div class="service">
-                <img src=""
+                <img src="https://th.bing.com/th/id/R.3d9de1e4701365059b5cc103f7bce336?rik=TaMXHFwnaX9%2fyw&pid=ImgRaw&r=0"
                     alt="Spa">
                 <p>Spa</p>
             </div>
             <div class="service">
-                <img src=""
+                <img src="https://lh5.googleusercontent.com/p/AF1QipMy39JDtMlvA8Qu1-cADCFFNOFTtNkvQqb4edse"
                     alt="Restaurante">
                 <p>Restaurante gourmet</p>
             </div>
             <div class="service">
-                <img src="" alt="Piscina">
+                <img src="https://i.pinimg.com/736x/0d/b5/6b/0db56bda4d8550836fd7aca921e48836.jpg" alt="Piscina">
                 <p>Piscina y recreación</p>
             </div>
         </div>
     </section>
-
+<!--Opiniones-->
     <section id="gallery" class="content">
         <h2 class="section-title">Opiniones</h2>
-        <p class="section-description">Descubre lo que dicen nuestros huéspedes sobre su experiencia.</p>
+        <p class="texto-p">Descubre lo que dicen nuestros huéspedes sobre su experiencia.</p>
 
         <div class="carousel">
             <div class="review-card">
@@ -169,39 +158,34 @@ export default {
         <button class="next-btn" onclick="scrollCarousel(1)">&#10095;</button>
     </section>
 
-
-
+<!--Contacto-->
     <section id="contact" class="content">
-        <h2>Contacto</h2>
-        <p>Ponte en contacto con nosotros para cualquier consulta o reserva.</p>
+        <h2 class="sobreN">CONTACTO</h2>
+        <p class="texto-p">Ponte en contacto con nosotros para cualquier consulta o reserva.</p>
 
-        <div>
-            <a href="tel:+529531377517">
+        <div class="Credes">
+            <a class="redes" href="tel:+529531377517">
                 <i class="fa-solid fa-phone"></i>
             </a>
-            <a href="mailto:contacto@milnoches.com">
+            <a class="redes" href="mailto:contacto@milnoches.com">
                 <i class="fa-solid fa-envelope"></i>
             </a>
-            <a href="#">
+            <a class="redes" href="#">
                 <i class="fa-brands fa-twitter"></i>
             </a>
-            <a href="#">
+            <a class="redes" href="#">
                 <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="#">
+            <a class="redes" href="#">
                 <i class="fa-brands fa-instagram"></i>
             </a>
         </div>
     </section>
 
-
-
-
-
     <footer>
         <p>&copy; 2025 Hotel las Mil Noches Todos los derechos reservados.</p>
     </footer>
-   
+
 </template>
 
 <style scoped>
@@ -224,10 +208,6 @@ export default {
 
 body {
   font-family: 'Poppins', sans-serif;
-
-
-
-
 }
 
 /* Estilo del header */
@@ -236,7 +216,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--header-bg);
+  background: #c9a861a1;
   padding:  0.5rem 0;
   display: flex;
   flex-direction: row;
@@ -250,7 +230,7 @@ header {
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--text-color);
+  color: #ffffff;
   letter-spacing: 1px;
   margin-bottom: 0.8rem;
   margin-left: 5rem;
@@ -284,7 +264,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--primary-color);
+  color:  #c9a861;
 }
 
 /* Estilo de la sección hero */
@@ -309,7 +289,7 @@ nav {
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
   font-weight: 700;
-  color: var(--text-color);
+  color:white;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   letter-spacing: 2px;
@@ -319,7 +299,7 @@ nav {
 .hero p {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
-  color: var(--text-color);
+  color:white;
   margin-bottom: 2.5rem;
   letter-spacing: 1px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -384,7 +364,7 @@ nav {
 
 /* Estilo del botón */
 .hero .btn, .hero a.btn, .hero button.btn {
-  background-color: var(--primary-color);
+  background-color:  #c9a861;
   color: var(--text-color);
   border: none;
   padding: 1.2rem 2.5rem;
@@ -494,10 +474,17 @@ nav {
 .content {
     padding: 3rem 1rem;
     text-align: center;
+
+}
+
+#rooms{
+    padding: 40px; 
+    background-color: #ece8e1; 
+    border-radius: 10px;
 }
 
 footer {
-    background: var(--primary-color);
+    background: #c9a861;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -768,5 +755,241 @@ footer {
 
 .pan{
     color: #c9a861;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.hotel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.hotel-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.hotel-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.hotel-nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.hotel-hero {
+  text-align: center;
+  padding: 50px;
+  background: url('Img/hero.jpg') no-repeat center center/cover;
+  color: white;
+}
+
+.hotel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.ubicacion{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.titulos{
+  color: #ffffff;
+}
+
+.price-button {
+    background-color: #c9a861;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.price-button:hover {
+  background-color: #b28b4c;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.price-button:active {
+  transform: scale(0.98);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+ }
+
+ .price-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.price-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.ruleta{
+  width: 100%; 
+  height: 450px; 
+  object-fit: cover; 
+  border-radius: 10px;
+  }
+
+.habitaciones{
+  font-size: 1.3rem; 
+  text-align: center; 
+  color: #555; 
+  margin-bottom: 30px;
+  font-size: 1.2rem; 
+  line-height: 1.6; 
+  text-align: justify; 
+  margin: 20px auto; 
+  padding: 15px; 
+  background-color: #f8f8f8; 
+  border-left: 5px solid #c9a861; 
+  max-width: 80%;
+}
+.cuadro{
+  text-align: center; 
+  margin-top: 15px;
+}
+.texto-p{
+  font-size: 1.3rem; 
+  text-align: center; 
+  color: #555; 
+  margin-bottom: 30px;
+}
+
+.section-title {
+    color: #c9a861;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.review-card {
+    min-width: 300px;
+    max-width: 350px;
+    flex: 0 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f8f8, #fff);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stars {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.review-author {
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+            left: 5%;
+}
+
+.next-btn {
+            right: 5%;
+}
+#contact{
+  text-align: center; 
+  padding: 20px; 
+  color: #555; 
+  background-color: #ece8e1; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.redes{
+  text-decoration: none; 
+  color: #c9a861; 
+  font-size: 1.8rem;
+}
+.Credes{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px; 
+  margin-top: 15px;
 }
 </style>
