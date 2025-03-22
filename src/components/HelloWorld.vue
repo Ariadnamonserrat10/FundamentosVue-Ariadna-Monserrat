@@ -11,7 +11,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h2>FLORA</h2>
+                    <h2 class="flora">FLORA</h2>
                     <img width="100px" height="100px" style="display: block; margin: auto; border-radius: 15%;"  src="https://i.pinimg.com/736x/1a/69/4a/1a694a7c4e8a0cff078c9a6fda6ec309.jpg" alt="">
                 </div>
                 <div class="card-body">
@@ -26,7 +26,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h2>FAUNA</h2>
+                    <h2 class="fauna">FAUNA</h2>
                     <img width="100px" height="100px" style="display: block; margin: auto; border-radius: 15%;" src="https://i.pinimg.com/736x/06/0e/5a/060e5aa0c24dde7243af81f726298dfd.jpg" alt="">
                 </div>
                 <div class="card-body">
@@ -86,5 +86,28 @@
 
 <style scoped>
 /*Estilos css*/
+h1{
+    color: #4CAF50;
+    font-family: cursive;
+    text-shadow: 2px 2px 4px #0b5317;
+    font-size: 80px;
+}
 
+.flora{
+    color: #4CAF50;
+    font-family: fantasy;
+    text-align: center;
+}
+
+.fauna{
+    color: #ee843e;
+    font-family: fantasy;
+    text-align: center;
+}
+
+p{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 18px;
+}
 </style>
