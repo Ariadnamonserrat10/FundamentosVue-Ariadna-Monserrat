@@ -1,5 +1,6 @@
 <template>
-        <div class="row mt-4">
+<!--Card-->
+<div class="row mt-4">
     <div class="col-md-4">
         <div class="card" style="width: 18rem;">
             <img src="https://i.pinimg.com/736x/c8/a9/3c/c8a93c1fb3e6e6e3400b3046314588e4.jpg" class="card-img-top" alt="Lirio">
